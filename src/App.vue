@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Layout from '@/components/Layout/MenuLeft/index.vue'
+
 </script>
 
 <template>
-  <div class="app">
-    <Layout />
-  </div>
+    <div class="app">
+      <router-view />
+    </div>
 </template>
 
 <style scoped>

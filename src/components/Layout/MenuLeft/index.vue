@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import SubMenu from '@/components/Layout/SubMenu/index.vue'
 import type { MenuListType } from '@/types/menu'
+import { useSettingStore } from '@/store/modules/setting'
+
+const settingStore = useSettingStore()
+const menuOpenWidth = computed(() => settingStore.getMenuOpenWidth)
 
 const menuList: MenuListType[] = [ 
   {
@@ -67,5 +72,8 @@ const menuList: MenuListType[] = [
   scrollbar-width: none;
   border: solid blue;
 
+  .el-menu:not(.el-menu--collapse) {
+    width: v-bind(menuOpenWidth);
+  }
 }
 </style>

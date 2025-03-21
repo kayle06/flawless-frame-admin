@@ -1,0 +1,113 @@
+@use '@/style/variables.scss';
+
+.user-popover {
+  // padding: 0 !important;
+
+  .user-menu-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 0;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--parism-border-divider-color) ;
+      padding-bottom: 15px;
+
+      .user-wrapper {
+        // width: calc(100% - 60px);
+        // height: 100%;
+
+        span {
+          display: block;
+        }
+
+        .name {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .email {
+          margin-top: 3px;
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+
+    .user-menu {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--parism-border-divider-color);
+      
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px;
+          span {
+            color: var(--parism-text-color);
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .logout {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      border: 1px solid var(--parism-border-divider-color);
+      border-radius: 5px;
+      margin: 15px 0 7px 0;
+      padding: 7px 0;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent !important;
+  transition: all 0.3s ease-in-out;
+  border: solid red;
+
+  .functional-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    .left-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .right-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .user-info {
+      }
+    }
+  }
+}
+
